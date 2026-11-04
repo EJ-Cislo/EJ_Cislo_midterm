@@ -1,0 +1,189 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background-color: palegreen;
+}
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+/* navigation menu */
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 12px;
+    margin: 0;
+    background-color:aliceblue
+}
+.menu li a{
+    display: block;
+    color: purple;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+}
+/* main sectin */
+.main {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "about"
+    "papers"
+    "discovers"
+    "accomplishments"
+    "hobbies"
+    "article"
+    "footer";
+}
+/* about section */
+.about {
+    grid-area: about;
+    background-color: lightblue;
+    text-align: center;
+    padding: 30px;
+}
+.about img {
+    width: 75%;
+    max-width: 500px;
+    height: 100%;
+    padding: 20px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.about h1 {
+    font-size: 40px;
+}
+.about h2 {
+    font-size: 30px;
+}
+.about p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: auto;
+}
+/* papers section */
+.papers {
+    grid-area: papers;
+    background-color: lightcyan;
+    padding: 20px;
+    text-align: center;
+}
+.paper1, .paer2, .paper3, .paper4, .paper5{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+}
+.paper1 img, .paper2 img, .paper3 img, .paper4 img, .paper5 img{
+    display: block;
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    align-items: left;
+}
+/* discovers section */
+.discovers {
+    grid-area: discovers;
+    background-color: plum;
+    text-align: center;
+    padding: 20px;
+}
+.discovers ul {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+.discovers li {
+    text-align: center;
+    padding: 8px;
+    margin-left: auto;
+    margin-right: center;
+}
+/* accomplishments section */
+.accomplishments {
+    grid-area: accomplishments;
+    background-color: powderblue;
+    text-align: center;
+    padding: 20px;
+}
+.accomplishments ul {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+.accomplishments li {
+    text-align: center;
+    padding: 8px;
+    margin-left: auto;
+    margin-right: center;
+}
+/* hobbies section */
+.hobbies {
+    grid-area: hobbies;
+    background-color: lightseagreen;
+    text-align: center;
+    padding: 20px;
+}
+.hobbies ul {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+.hobbies li {
+    text-align: center;
+    padding: 8px;
+    margin-left: auto;
+    margin-right: center;
+}
+/* article section */
+.article {
+    grid-area: article;
+    background-color: lightskyblue;
+    text-align: center;
+    padding: 30px;
+}
+.article p {
+    font-size: 18px;
+    margin: auto;
+    max-width: 800px;
+}
+/* footer section */
+.footer {
+    grid-area: footer;
+    background-color: lightsteelblue;
+    text-align: center;
+    padding: 20px;
+}
+.footer p {
+    font-size: 18px;
+}
+/*mobile version only */
+@media only screen and (max-width: 430px) {
+    /* if the screen is less than 430px wide, do this */
+    body {
+        background-color: goldenrod;
+    }
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr, 1.5fr, 1fr, 1fr, 1fr, 1fr, 1fr;
+        gap: 0.5rem;
+        grid-template-rows: 
+        "header"
+        "about"
+        "papers"
+        "discovers"
+        "accomplishments"
+        "hobbies"
+        "article"
+    }
+}
